@@ -14,7 +14,7 @@ var peer = new Peer(undefined, {
   port: 3030,
 });
 
-//let myVideoStream;
+let myVideoStream;
 //const ROOM_ID;
 
 navigator.mediaDevices
@@ -23,7 +23,7 @@ navigator.mediaDevices
     audio: true,
   })
   .then((stream) => {
-    //myVideoStream = stream;
+    myVideoStream = stream;
     addVideoStream(myVideo, stream);
 
     peer.on("call", (call) => {
