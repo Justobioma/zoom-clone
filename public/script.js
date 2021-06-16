@@ -62,3 +62,24 @@ const addVideoStream = (video, stream) => {
   });
   videoGrid.append(video);
 };
+
+let input = document.querySelector("input");
+
+input.addEventListener("keydown", (e) => {
+  if (e.keyCode === 13 && e.target.value.length !== 0) {
+    console.log(e.target.value);
+    socket.emit("message", e.target.value);
+    document.getElementById("chat_message").value = "";
+  }
+});
+
+// let text = $("input");
+// //console.log(text);
+//
+// $("html").keydown((e) => {
+//   if (e.which == 13 && text.val().length !== 0) {
+//     console.log(text.val());
+//     //socket.emit("message", text.val());
+//     //text.val("");
+//   }
+// });
