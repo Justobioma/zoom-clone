@@ -104,6 +104,6 @@ video {
 }
 
 .unmute,
-.stopvideo {
+.stop {
   color: #cc3833;
 }
